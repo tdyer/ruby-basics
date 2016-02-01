@@ -1,0 +1,8 @@
+In the demo directory.
+- hello_world.rb
+- comments.rb
+- numbers.rb
+- booleans.rb
+- strings.rb
+- variables.rb
+- Show IRB and PRY
