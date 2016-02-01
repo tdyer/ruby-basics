@@ -55,20 +55,63 @@ Objects, or things, can be classified. For example:
 
 We **"classify"** objects in **Object Oriented Programming (OOP)** by using a **Class**. So, Song, Playlist, Car, Person, Book and Integer are all Classes. 
 
-We'll get into how these are represented and created later in the
-week.
+We'll get into how these are represented and created later.
 
-### Object's may have data *properites* and *behavior*.  
+### Object's have *data* and *behavior*.  
 
-_(In Ruby an Object's properties are implemented using **attributes** and behavior is implemented using **methods**)._  
+__Data is expressed as variables or object attributes.__
 
-* Each Song will have a name, duration, artist name data attributes and will have a play method.    
+__Behavior is expressed as methods, *aka functions in other languages*.__
+
+* Each Song will have a name, duration, artist name __attributes__ and will have a play __method__.    
 	* The top song of 92 name is 'Jeremy', the artist is 'Pearl Jam' and plays for 5 minutes and 18 seconds.  
-* Each Car will have make, model and year attributes. And it will have a reverse method.  
+* Each Car will have make, model and year __attributes__. And it will have a drive __method__.  
 	* My first car was a 1969, Ford LTD.  
-* Each Person will have a name and DOB and they will be able to talk. It's behavior is talk.  
-* Each Fixnum will have a add,subtract, mult and divide methods.
+* Each Person will have a name and DOB __attributes__ and they will havd a __talk__ method. It's behavior is talk.  
+* Each Fixnum will have a add,subtract, mult and divide __methods__. These methods and some others are called __operators__.
 	* The integer 23 can be added, subtracted, etc.
+
+In Ruby, almost, everything is an __object__. And we'll use __objects__ below that represent numbers, strings etc. And we'll use methods like `puts` below as well.
+
+## You Do 
+
+List three classes that could be some application you could write.
+
+What are a couple attributes and methods that these classes could have?
+
+Give an example of an __instance__ of these classes. Yes, these are objects of a class.
+
+## Ruby Documentation
+
+The Official [Ruby Documentation](http://ruby-doc.org/). You will __ALWAYS__ be using Ruby Docs. Don't even think you can memorized Ruby. _Quite_ a waste of time IMO.
+
+### Core API
+
+The set of Ruby classes that are __core__ to the Ruby language. 
+[Ruby Core Classes](http://ruby-doc.org/core-2.3.0/). __Some of these classes are used in every Ruby program.__
+
+### Standard Library API
+
+The set of Ruby classes that are more targeted to specific tasks.
+
+[Ruby Standard Library Classes](http://ruby-doc.org/stdlib-2.3.0/)
+
+### Ruby Gems
+
+3rd Party Libraries not part of the Ruby language. We'll be using more of these later.
+[Ruby Gems](https://rubygems.org/) 
+
+You can find the right Gem for the job with the [Ruby Toolbox](https://www.ruby-toolbox.com/).
+
+### More Documentation
+
+* [API Dock](http://apidock.com/ruby)
+* [Dash API Documentation Browser](https://kapeli.com/dash). Good for other languages and offline docs.
+
+
+## You Do
+
+Find and explain the `String#gsub`, `String#split`, `String#<<`, `Fixnum#<=>`, `Fixnum#abs` and `Fixnum#even?` methods.
 
 ## Running Ruby
 
@@ -130,7 +173,9 @@ The pound, ``#``, character is used to indicate a **comment**. So a **comment st
 
 ## Data Types
 
-In Ruby, *almost*, everything is an object created by a class. Some Ruby classes are *built into the language*. These are often referered to as **Data Types**
+In Ruby, *almost*, everything is an object created by a class. Some Ruby classes are *built into the language*. These are often referered to as **Data Types**.
+
+These are very similiar to the core set of classes that are build into most programming languages.
 
 Some of these are [Fixnum](http://ruby-doc.org/core-2.2.0/Fixnum.html), [Float](http://ruby-doc.org/core-2.2.0/Float.html), Booleans ([true](http://ruby-doc.org/core-2.2.0/TrueClass.html) and [false](http://ruby-doc.org/core-2.2.0/FalseClass.html)), [String](http://ruby-doc.org/core-2.2.0/String.html), [Symbol](http://ruby-doc.org/core-2.2.0/Symbol.html) and [Range](http://ruby-doc.org/core-2.2.0/Range.html).
 
@@ -281,8 +326,8 @@ puts "simple string".include?('xyz')
 
 ## You Do 
 * Look up the Ruby classes for the above data types, Fixnum, Float, Boolean and String.
-* Learn a new method for each of these and explain it to your neighbor.
-* Read about one of the to_<something> methods and explain it to another student.  
+* Learn a new method for each of these classes and use it in a program run on the command line.
+* Create and run a program to display you first name 3 times.
 
 ## Variables
 Variables are pointers, i.e. references, to objects. The objects we're going to reference here are just Sting objects. But variables can reference any class of object.
@@ -380,7 +425,6 @@ Create a couple of variables, *all values will be an instance of a String.*
 * Name of your fifth grade teacher, same person as your first grade teacher.
 * Your first grade teacher got married and their last name changed. *Yep, probably need to change the value in-place.*
 * Your third grade teacher had a child with the same name but they are using the suffix 'JR'.
-* Name of some therimin instructor that you will have after you finally get around to signing up for instruction at the senior center. *Oh, maybe you don't have a name for them yet but you want a variable.*
 * Go back to the above "What is a variable" and show someone examples of each item in the list.
 
 ## Variables in Depth (Optional)
@@ -401,14 +445,14 @@ Ruby uses "pound curly braces" to do string interpolation.
 mom = 'Gladys Dyer'
 puts "My mom is #{mom}"
 
-street_num = 39
+street_num = 403
 street_suffix =	'Ave'
-street = "Wedgemere #{street_suffix}"
-city = 'Lowell'
+street = "Oak #{street_suffix}"
+city = 'Clinton'
 state = 'MA'
 puts "#{street_num} #{street}, #{city} #{state}"
 
-# Notice how the Fixnum object 39 is converted to a String object!
+# Notice how the Fixnum object 403 is converted to a String object!
 ```
 
 ## You Do
